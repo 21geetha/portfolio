@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiranji Geetha | Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#020617;
+      color:#e5e7eb;
+    }
+
+    a{ text-decoration:none; color:#38bdf8; }
+  .hero-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-image img{
+  width:320px;
+  height:320px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid #38bdf8;
+  box-shadow:0 0 40px rgba(56,189,248,0.4);
+}
+
+
+    /* NAVBAR */
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      padding:18px 10%;
+      background:rgba(2,6,23,0.85);
+      backdrop-filter:blur(8px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
+    }
+
+    nav h2{ color:#f8fafc; font-weight:600; }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{ color:#cbd5f5; font-weight:500; }
+    nav ul li a:hover{ color:#38bdf8; }
+
+    /* HERO */
+    header{
+      min-height:100vh;
+      padding:140px 10% 80px;
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      align-items:center;
+      gap:50px;
+      background:
+        linear-gradient(rgba(2, 23, 116, 0.9),rgba(2,6,23,0.9)),
+        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+      background-size:cover;
+      background-position:center;
+      background-attachment:scroll;
+    }
+
+    header h1{
+      font-size:3.5rem;
+      color:#f8fafc;
+      line-height:1.2;
+    }
+
+    header h1 span{ color:#38bdf8; }
+
+    header h3{
+      margin-top:15px;
+      font-weight:400;
+      color:#94a3b8;
+    }
+
+    header p{
+      margin:25px 0;
+      max-width:520px;
+      color:#cbd5f5;
+    }
+
+    .hero-btns{
+      display:flex;
+      gap:15px;
+    }
+
+    .btn{
+      padding:12px 28px;
+      border-radius:30px;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .btn-primary{
+      background:#38bdf8;
+      color:#020617;
+    }
+
+    .btn-primary:hover{ background:#0ea5e9; }
+
+    .btn-outline{
+      border:2px solid #38bdf8;
+      color:#38bdf8;
+    }
+
+    .btn-outline:hover{
+      background:#38bdf8;
+      color:#020617;
+    }
+
+    /* SECTIONS */
+    section{ padding:90px 10%; }
+
+    section h2{
+      font-size:2.4rem;
+      margin-bottom:50px;
+      text-align:center;
+      color:#f8fafc;
+    }
+
+    /* ABOUT */
+    #about{
+      background:
+        linear-gradient(rgba(15,23,42,0.95),rgba(15,23,42,0.95)),
+        url('https://images.unsplash.com/photo-1557683316-973673baf926');
+      background-size:cover;
+    }
+
+    #about p{
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+      font-size:1.05rem;
+      color:#cbd5f5;
+    }
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#020617;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.4);
+      transition:.3s;
+    }
+
+    .card:hover{ transform:translateY(-8px); }
+
+    .card h3{ color:#38bdf8; margin-bottom:12px; }
+
+    /* EDUCATION */
+    #education{
+      background:
+        linear-gradient(rgba(2,6,23,0.95),rgba(2,6,23,0.95)),
+        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+      background-size:cover;
+    }
+
+    /* PROJECTS */
+    #projects{
+      background:
+        linear-gradient(rgba(2,6,23,0.92),rgba(2,6,23,0.92)),
+        url('https://images.unsplash.com/photo-1581091215367-59ab6c0f36b2');
+      background-size:cover;
+    }
+
+    /* SKILLS */
+    #skills{
+      background:
+        linear-gradient(rgba(15,23,42,0.95),rgba(15,23,42,0.95)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+      background-size:cover;
+    }
+
+    .skills-box{
+      max-width:900px;
+      margin:auto;
+      background:#020617;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.5);
+      text-align:center;
+    }
+
+    .skills-box p{
+      margin:10px 0;
+      color:#cbd5f5;
+      font-size:1.05rem;
+    }
+
+    /* CONTACT */
+    #contact{
+      background:
+        linear-gradient(rgba(2,6,23,0.95),rgba(2,6,23,0.95)),
+        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+      background-size:cover;
+      text-align:center;
+    }
+
+    .socials{
+      margin-top:20px;
+      display:flex;
+      justify-content:center;
+      gap:25px;
+    }
+
+    .socials a{
+      font-size:1.4rem;
+      color:#cbd5f5;
+    }
+
+    .socials a:hover{ color:#38bdf8; }
+
+    footer{
+      background:#020617;
+      padding:25px;
+      text-align:center;
+      color:#94a3b8;
+    }
+
+    @media(max-width:900px){
+      header{ grid-template-columns:1fr; text-align:center; }
+      .hero-btns{ justify-content:center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h2>Geetha</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <div>
+    <h1>Hi, I'm <span>Chiranji Geetha</span></h1>
+    <h3>Computer Science Engineering Student</h3>
+    <p>
+      To gain hands-on experience in SoC design verification and test methodologies at Apple, while applying my technical knowledge, learning from industry experts, and contributing to the development of high-quality silicon solutions.
+    </p>
+    <div class="hero-btns">
+      <a href="C:\Users\LENOVO\Desktop\geetha\CHIRANJI GEETHA (1).pdf" class="btn btn-primary" download>Download CV</a>
+      
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="C:\Users\LENOVO\Desktop\portfolio\New folder\geetha.jpeg" alt="Chiranji Geetha">
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    To secure a challenging and rewarding position in a reputable organization where I can effectively apply my technical knowledge, academic background, and problem-solving skills. I am eager to contribute meaningfully to team objectives while continuously enhancing my abilities through dedication, innovation, and a commitment to lifelong learning. My goal is to grow both personally and professionally by embracing opportunities that promote creativity, responsibility, and impactful outcomes.
+  </p>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>B.Tech – CSE</h3>
+      <p>Vignan’s Nirula Institute of Technology and Science for Women</p>
+      <p>CGPA: 8.3 (2022–2026)</p>
+    </div>
+    <div class="card">
+      <h3>Intermediate</h3>
+      <p>Ramakrishna Sahakara Junior College</p>
+      <p>83.7% (2020–2022)</p>
+    </div>
+    <div class="card">
+      <h3>SSC</h3>
+      <p>Z.P.H.S, Nagavaram</p>
+      <p>97% (2019–2020)</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:linear-gradient(rgba(2,6,23,0.95),rgba(2,6,23,0.95)),url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');background-size:cover;">
+  <h2>Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>IBM SkillsBuild – Sentiment Analysis</h3>
+      <p><strong>May – June 2024</strong></p>
+      <p>Designed and implemented a Naive Bayes based sentiment analysis model to classify hotel reviews as positive or negative using Python, NLTK, and scikit-learn.</p>
+    </div>
+    <div class="card">
+      <h3>Infosys Internship – ANPR & ATCC</h3>
+      <p><strong>Sep – Nov 2025</strong></p>
+      <p>Worked on AI-based Automatic Number Plate Recognition and Automatic Traffic Count systems using YOLO models for intelligent traffic management.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:linear-gradient(rgba(2,6,23,0.95),rgba(2,6,23,0.95)),url('https://images.unsplash.com/photo-1581091012184-7a6f1f9b7c4d');background-size:cover;">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://www.pantechsolutions.net/wp-content/uploads/2021/09/gesture_control_robot_2.png" alt="MEMS Based Hand Gesture Robot Control" style="width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:15px;">
+      <h3>MEMS-Based Hand Gesture Robot Control</h3>
+      <p>Designed a wireless robot control system using a MEMS accelerometer to detect hand gestures and convert them into motion commands using NodeMCU.</p>
+      <a href="https://github.com/21geetha/Mem-s-Based-Hand-Gesture-Robot-Control" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="card">
+      <img src="https://storytellers.kids/wp-content/uploads/2023/11/banner-2-scaled.jpeg" alt="Personalized Story Teller for Kids" style="width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:15px;">
+      <h3>Personalized Story Teller for Kids</h3>
+      <p>Developed a Django-based Generative AI web application to create personalized, age-appropriate children’s stories with language and emotion support.</p>
+      <a href="https://github.com/21geetha/Personalised-Story-Teller-for-Kids" target="_blank">View on GitHub →</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills" style="background:linear-gradient(rgba(15,23,42,0.95),rgba(15,23,42,0.95)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');background-size:cover;">
+  <h2>Skills</h2>
+  <div class="skills-box">
+    <p><strong>Programming Languages:</strong>C,Python</p>
+    <p><strong>Web Technologies:</strong> HTML, CSS</p>
+    <p><strong>AI & Machine Learning:</strong> NumPy, Pandas</p>
+    <p><strong>Version Control & Tools:</strong>GitHub, VS Code, MS Office</p>
+    <p><strong>Languages:</strong> English, Telugu</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:geetha21112004@gmail.com">geetha21112004@gmail.com</a></p>
+  <p>Phone: <a href="tel:+916302898200">+91 6302898200</a></p>
+  <div class="socials">
+    <a href="https://github.com/21geetha" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/chiranji-geetha-1642b92b7" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Chiranji Geetha | Portfolio
+</footer>
+
+</body>
+</html>
